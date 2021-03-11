@@ -40,6 +40,12 @@ const userSchema = mongoose.Schema(
       enum: roles,
       default: 'user',
     },
+    projects: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Project',
+      },
+    ],
   },
   {
     timestamps: true,
